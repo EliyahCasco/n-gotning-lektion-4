@@ -1,4 +1,6 @@
 #include <iostream>
+#include <fstream>
+#include <string>
 
 namespace Lib {
 
@@ -8,10 +10,22 @@ namespace Lib {
 	{
 		std::cout << t << "\n";
 	}
+
+	void writeToFile(std::string filePath)
+	{
+		std::ofstream file(filePath);
+		std::string fileContent;
+		std::getline(std::cin, fileContent);
+		file << fileContent;
+		file.close();
+	}
+
+	std::string filePath1 = "minfil.txt";
 }
 
 
 int main()
 {
-	Lib::Print(123);
+	Lib::Print("hej");
+	Lib::writeToFile("minfil.txt");
 }
