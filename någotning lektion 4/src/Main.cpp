@@ -6,11 +6,14 @@ namespace Lib {
 
 	template <typename T>
 
+	//template print function
 	void Print(T t)
 	{
 		std::cout << t << "\n";
 	}
 
+
+	//writes text to file
 	void writeToFile(std::string filePath)
 	{
 		std::ofstream file(filePath);
